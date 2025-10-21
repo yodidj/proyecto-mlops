@@ -25,7 +25,17 @@ jobs:
         run: make format
 
       - name: Ejecutar entrenamiento del modelo
-        run:  make train
+        id: train
+        run: |
+              make train | tee output.log
+
+      - name: Publicar métricas del modelo
+        if: always()
+        run: |
+          echo "## 🧠 Resultados del modelo" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          grep -E "Accuracy|F1 Score|Precision|Recall" output.log >> $GITHUB_STEP_SUMMARY || echo "No se encontraron métricas."
+
 
       - name: Guardar artefactos de MLflow
         uses: actions/upload-artifact@v4
