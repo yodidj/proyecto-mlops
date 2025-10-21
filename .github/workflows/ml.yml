@@ -1,0 +1,34 @@
+name: ML Pipeline CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: make install
+
+      - name: Dar formato al código
+        run: make format
+
+      - name: Ejecutar entrenamiento del modelo
+        run: make train
+
+      - name: Guardar artefactos de MLflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: modelo-entrenado
+          path: mlruns/
