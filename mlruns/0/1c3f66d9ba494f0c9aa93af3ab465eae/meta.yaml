@@ -1,0 +1,14 @@
+artifact_uri: file:///home/yodid/Documentos/proyecto-mlops/mlruns/0/1c3f66d9ba494f0c9aa93af3ab465eae/artifacts
+end_time: 1761020400982
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1c3f66d9ba494f0c9aa93af3ab465eae
+run_name: Entrenamiento_LogReg
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761020400966
+status: 4
+tags: []
+user_id: yodid

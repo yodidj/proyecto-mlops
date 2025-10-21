@@ -1,5 +1,6 @@
 data_path: data/heart.csv
 model_params:
-  solver: 'liblinear'
+  solver: 'lbfgs'
   C: 1.0
   random_state: 42
+  max_iter: 500

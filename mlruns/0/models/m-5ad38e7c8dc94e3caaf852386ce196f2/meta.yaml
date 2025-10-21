@@ -1,0 +1,10 @@
+artifact_location: file:///home/yodid/Documentos/proyecto-mlops/mlruns/0/models/m-5ad38e7c8dc94e3caaf852386ce196f2/artifacts
+creation_timestamp: 1761020896153
+experiment_id: '0'
+last_updated_timestamp: 1761020899194
+model_id: m-5ad38e7c8dc94e3caaf852386ce196f2
+model_type: null
+name: model
+source_run_id: b84281cc79b94b92964fbc2734a330df
+status: 2
+status_message: null
