@@ -4,7 +4,7 @@ install:
 format:
 	black src/
 
-train:
+train:	
 	PYTHONPATH=. python src/train.py
 
 test:
