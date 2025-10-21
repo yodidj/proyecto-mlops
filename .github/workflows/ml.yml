@@ -25,11 +25,7 @@ jobs:
         run: make format
 
       - name: Ejecutar entrenamiento del modelo
-        run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          make train
-
-        run: make train
+        run:  make train
 
       - name: Guardar artefactos de MLflow
         uses: actions/upload-artifact@v4
